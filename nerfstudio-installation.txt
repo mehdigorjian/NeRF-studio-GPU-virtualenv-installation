@@ -1,0 +1,36 @@
+pip install --upgrade pip
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+
+# Install TinyCuda method 1
+gdown "https://drive.google.com/u/1/uc?id=1-7x7qQfB7bIw2zV4Lr6-yhvMpjXC84Q5&confirm=t"
+pip install tinycudann-1.7-cp310-cp310-linux_x86_64.whl
+
+# Install TinyCuda method 2
+pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
+# Install COLMAP
+gdown "https://drive.google.com/u/0/uc?id=15WngFRNar_b8CaPR5R-hvQ3eAnlyk_SL&confirm=t"
+sudo apt-get install \
+    build-essential \
+    libboost-program-options-dev \
+    libboost-filesystem-dev \
+    libboost-graph-dev \
+    libboost-system-dev \
+    libboost-test-dev \
+    libeigen3-dev \
+    libflann-dev \
+    libfreeimage-dev \
+    libmetis-dev \
+    libgoogle-glog-dev \
+    libgflags-dev \
+    libsqlite3-dev \
+    libglew-dev \
+    qtbase5-dev \
+    libqt5opengl5-dev \
+    libcgal-dev \
+    libceres-dev
+unzip local.zip -d /usr/
+chmod +x /usr/local/bin/colmap
+
+# Install nerfstudio
+pip install git+https://github.com/nerfstudio-project/nerfstudio.git
